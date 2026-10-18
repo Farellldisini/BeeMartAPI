@@ -10,7 +10,7 @@ public class Product
     public decimal Discount { get; set; }
     public Byte Stsrc { get; set; }
     public string Userin { get; set; } = string.Empty;
-    public DateTime? dateup { get; set; } = null;
+    public DateTime Dateup { get; set; } 
     public string Userup { get; set; } = string.Empty;
 
 
