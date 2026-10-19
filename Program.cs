@@ -1,9 +1,16 @@
+using BeeMart.API.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddControllers();
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(
+    builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
@@ -15,6 +22,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.MapControllers();
 
 var summaries = new[]
 {
@@ -33,8 +41,20 @@ app.MapGet("/weatherforecast", () =>
         .ToArray();
     return forecast;
 })
-.WithName("GetWeatherForecast")
-.WithOpenApi();
+.WithName("GetWeatherForecast");
+
+app.MapGet("/api/v1/test-db", async (ApplicationDbContext db) =>
+{
+    var userCount = await db.Users.CountAsync();
+    var productCount = await db.Products.CountAsync();
+
+    return Results.Ok(new
+    {
+        message = "Database connected successfully",
+        totalUsers = userCount,
+        totalProducts = productCount
+    });
+});
 
 app.Run();
 

@@ -1,7 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace BeeMart.API.Models;
 
 public class PaymentMethod
 {
+    [Key]
     public int IdPaymentMethod { get; set; }
     public string MethodName { get; set; } = string.Empty;
     public bool Stsrc { get; set; }

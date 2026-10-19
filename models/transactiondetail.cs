@@ -1,13 +1,16 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace BeeMart.API.Models;
 
 public class TransactionDetail
-{
-    public string TransactionDetailID { get; set; } = string.Empty;
-    public string TransactionID { get; set; } = string.Empty;
-    public string ProductID { get; set; } = string.Empty;
-    public int Quantity { get; set; }
+{   
+    [Key]
+    public string IdTransactionDetail{ get; set; } = string.Empty;
+    public string IdTransaction { get; set; } = string.Empty;
+    public string IdProduct { get; set; } = string.Empty;
+    public int Qty{ get; set; }
     public decimal Discount { get; set; }
-    public decimal Subtotal { get; set; }
+    public decimal SubTotal { get; set; }
     public Byte Stsrc { get; set; }
     public DateTime Datein { get; set; } 
     public string Userin { get; set; } = string.Empty;

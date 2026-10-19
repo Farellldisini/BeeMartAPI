@@ -1,11 +1,18 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace BeeMart.API.Models;
 
 public class User
 {
-    public int UserID { get; set; }
+    [Key]
+    public string IdUser { get; set; } = string.Empty;
     public string Username { get; set; } = string.Empty;
     public string FullName { get; set; } = string.Empty;
     public string PasswordHash { get; set; } = string.Empty;
-    public string[] Role { get; set; } = ["Admin", "Cashier"];
+    public string Role { get; set; } = "Cashier";
+    public bool Stsrc { get; set; }
+    public string Userin { get; set; } = string.Empty;
+    public DateTime? dateup { get; set; } = null;
+    public string? Userup { get; set; } = null;
     
 }
