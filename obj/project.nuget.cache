@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "cPcwrTxiBbo=",
+  "dgSpecHash": "LlU3UHJkIGA=",
   "success": true,
   "projectFilePath": "C:\\Users\\farel\\OneDrive\\Documents\\Semester 0\\BeeMart.API\\BeeMart.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\farel\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\farel\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\farel\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\farel\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\farel\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.32\\microsoft.aspnetcore.openapi.8.0.32.nupkg.sha512",
     "C:\\Users\\farel\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

@@ -11,8 +11,9 @@ public class User
     public string PasswordHash { get; set; } = string.Empty;
     public string Role { get; set; } = "Cashier";
     public bool Stsrc { get; set; }
+    public DateTime? Datein { get; set; }
     public string Userin { get; set; } = string.Empty;
-    public DateTime? dateup { get; set; } = null;
+    public DateTime? Dateup { get; set; } = null;
     public string? Userup { get; set; } = null;
     
 }

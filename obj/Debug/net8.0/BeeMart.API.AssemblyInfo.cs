@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BeeMart.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5346481f0a083e268378f949381ab8ed099b58de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b4c6c2b38a8f6b4ab309d2e9edc674550c09d40")]
 [assembly: System.Reflection.AssemblyProductAttribute("BeeMart.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BeeMart.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
