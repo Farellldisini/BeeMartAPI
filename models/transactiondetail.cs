@@ -9,6 +9,7 @@ public class TransactionDetail
     public string IdTransaction { get; set; } = string.Empty;
     public string IdProduct { get; set; } = string.Empty;
     public int Qty{ get; set; }
+    public decimal Price{ get; set; }
     public decimal Discount { get; set; }
     public decimal SubTotal { get; set; }
     public Byte Stsrc { get; set; }

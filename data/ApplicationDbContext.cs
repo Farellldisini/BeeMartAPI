@@ -23,7 +23,7 @@ public class ApplicationDbContext : DbContext
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.Entity<User>().ToTable("msuser");
-        modelBuilder.Entity<Product>().ToTable("msproduct");
+        modelBuilder.Entity<Product>().ToTable("MsProduct");
         modelBuilder.Entity<PaymentMethod>().ToTable("ltpaymentmethod");
         modelBuilder.Entity<Transaction>().ToTable("trtransaction");
         modelBuilder.Entity<TransactionDetail>()
