@@ -136,3 +136,4 @@ C:\Users\farel\OneDrive\Documents\Semester 0\BeeMart.API\bin\Debug\net8.0\runtim
 C:\Users\farel\OneDrive\Documents\Semester 0\BeeMart.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\farel\OneDrive\Documents\Semester 0\BeeMart.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\farel\OneDrive\Documents\Semester 0\BeeMart.API\obj\Debug\net8.0\BeeMart.API.sourcelink.json
+C:\Users\farel\OneDrive\Documents\Semester 0\BeeMart.API\bin\Debug\net8.0\BCrypt-Net-Next.dll

@@ -11,7 +11,7 @@ public class Transaction
     public string IdUser { get; set; } = string.Empty;
     public int IdPaymentMethod { get; set; }
     public decimal TotalPrice { get; set; }
-    public Byte Stsrc { get; set; }
+    public bool Stsrc { get; set; }
     public DateTime Datein { get; set; }
     public string Userin { get; set; } = string.Empty;
     public DateTime? Dateup { get; set; } = null;

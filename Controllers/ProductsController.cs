@@ -16,10 +16,19 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetProducts()
+    public async Task<IActionResult> GetProducts([FromQuery] string? search)
     {
-        var products = await _context.Products.ToListAsync();
+        var query = _context.Products.AsQueryable();
 
+        if (!string.IsNullOrWhiteSpace(search))
+        {
+            var keyword = search.Trim().ToLower();
+            query = query.Where(p => p.Name.ToLower().Contains(keyword));
+            var results = await query.Take(10).ToListAsync();
+            return Ok(results);
+        }
+
+        var products = await query.ToListAsync();
         return Ok(products);
     }
 }
