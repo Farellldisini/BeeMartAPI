@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeMart - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <div class="login_page">
+        <div class="login_box">
+            <form id="login-form">
+                <h1>BeeMart Login</h1>
+
+                <div class="form">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form">
+                    <label for="role">Role</label>
+                    <select id="role" name="role" required>
+                        <option value="Cashier">Kasir</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+                </div>
+
+                <button type="submit" name="Login" id="btn-login">Login</button>
+                <p class="regist">
+                    Don't have an account ? <a href="register.html">Register</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

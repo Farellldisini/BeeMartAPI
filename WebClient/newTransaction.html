@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeMart - New Transaction</title>
+    <link rel="stylesheet" href="newTransaction.css">
+    <script src="newTransaction.js" defer></script>
+</head>
+<body>
+
+   
+    <header class="navbar">
+        <div class="nav-brand">
+            <span>BeeMart</span>
+        </div>
+        <div class="nav-right">
+            <span class="nav-time" id="realtime-clock">--/--/---- --:--:--</span>
+            <span class="nav-user" id="user-display">Role: Cashier | Login: steven</span>
+            <button type="button" class="btn-logout" id="btn-logout">Logout</button>
+        </div>
+    </header>
+
+  
+    <main class="main-wrapper">
+
+        
+        <nav class="tab-nav">
+            <a href="newTransaction.html" class="tab-item active">New Transaction</a>
+            <a href="histroy.html" class="tab-item">History Transaction</a>
+        </nav>
+
+        
+        <div class="card">
+
+            <div class="invoice-bar">
+                Invoice No: <span id="invoice-no">76985040926001</span>
+            </div>
+
+            <div class="form-group">
+                <label for="search-input">Search Items (Type: Apple / Milk, then press Enter)</label>
+                <input type="text" id="search-input" class="input-text" placeholder="Type item name and press Enter...">
+            </div>
+
+        
+            <div id="search-result-container" style="display: none; margin-bottom: 20px;">
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Item Name</th>
+                                <th>Weight</th>
+                                <th>Stock</th>
+                                <th>Price</th>
+                                <th>Discount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="search-table-body">
+    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="selected-box" id="selected-box" style="display: none;">
+                <div class="selected-title">Selected Item: <span id="sel-name">-</span></div>
+                <div class="selected-info-row">
+                    <div>Unit Price: <span class="val" id="sel-price">Rp 0</span></div>
+                    <div>Stock: <span class="val" id="sel-stock">0</span></div>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <label for="input-qty" style="font-weight: 600;">Qty:</label>
+                        <input type="number" id="input-qty" class="input-qty" value="1" min="1">
+                    </div>
+                    <button type="button" class="btn-primary" id="btn-add-cart">Add to Cart</button>
+                </div>
+                <div class="error-text" id="stock-error">Quantity exceeds remaining stock.</div>
+            </div>
+
+            
+            <h3 class="section-heading">Shopping Cart</h3>
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Price</th>
+                            <th>Discount</th>
+                            <th>Qty</th>
+                            <th>Subtotal</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-table-body">
+                        <tr>
+                            <td colspan="6" style="text-align: center; color: #94A3B8; padding: 16px;">
+                                No items in cart.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="checkout-panel">
+                <div class="total-display">
+                    Total: <span id="total-price">Rp 0</span>
+                </div>
+
+                <div class="payment-row">
+                    <label for="payment-method">Payment Method:</label>
+                    <select id="payment-method" class="select-box">
+                        <option value="1">Cash</option>
+                        <option value="2">Debit</option>
+                        <option value="3">Credit</option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn-submit" id="btn-submit">Submit Transaction</button>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>

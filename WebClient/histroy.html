@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeMart - Transaction History</title>
+    <link rel="stylesheet" href="history.css">
+    <script src="history.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-brand">
+            <span>BeeMart</span>
+        </div>
+        <div class="nav-right">
+            <span class="nav-time" id="realtime-clock">--/--/---- --:--:--</span>
+            <span class="nav-user" id="user-display">Role: Cashier | Login: -</span>
+            <button type="button" class="btn-logout" id="btn-logout">Logout</button>
+        </div>
+    </header>
+
+    <main class="main-wrapper">
+        <nav class="tab-nav">
+            <a href="newTransaction.html" class="tab-item">New Transaction</a>
+            <a href="history.html" class="tab-item active">History Transaction</a>
+        </nav>
+
+        <div class="card">
+            <div class="history-subheading" id="history-subtitle">
+                Transaction Data Search
+            </div>
+
+            <div class="filter-bar">
+                <label for="history-date">Pilih Tanggal:</label>
+                <input type="date" id="history-date" class="input-date">
+                <button type="button" class="btn-primary" id="btn-search-history">Cari Data</button>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>No. Transaksi</th>
+                            <th>Tanggal & Jam</th>
+                            <th>Kasir</th>
+                            <th>Jml Item</th>
+                            <th>Pembayaran</th>
+                            <th>Total Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-table-body">
+                        <tr>
+                            <td colspan="6" style="text-align: center; color: #94A3B8; padding: 16px;">
+                                Memuat data...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination" id="pagination-controls">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
